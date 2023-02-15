@@ -61,7 +61,7 @@ function agregarAlCarrito(productoID) {
 function actualizarCarrito() {
   const carrito = obtenerCarrito();
   const totalProductos = carrito.reduce((total, producto) => total + producto.cantidad, 0);
-  document.getElementById('total-carrito').textContent = totalProductos;
+  document.getElementById('carrito-total').textContent = totalProductos;
 }
 
 function obtenerCarrito() {
