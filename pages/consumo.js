@@ -90,3 +90,74 @@ document.addEventListener('DOMContentLoaded', () => {
   actualizarCarrito();
 });
 
+
+// Buscamos el botón de "Vaciar Carrito"
+const botonVaciarCarrito = document.getElementById('carrito-vaciar');
+
+// Agregamos un event listener al botón
+botonVaciarCarrito.addEventListener('click', () => {
+  // Vaciamos el carrito en el local storage
+  localStorage.setItem('carrito', JSON.stringify([]));
+  // Actualizamos la vista
+  actualizarCarrito();
+});
+
+function mostrarProductosCarrito(carrito) {
+  const listaProductos = document.getElementById('carrito-lista');
+  const listaCantidad = document.getElementById('carrito-cantidad');
+  listaProductos.innerHTML = '';
+  listaCantidad.innerHTML = '';
+  let total = 0;
+  carrito.forEach(producto => {
+    const item = document.createElement('li');
+    const cantidad = document.createElement('span');
+    cantidad.textContent = producto.cantidad;
+    const nombre = document.createElement('span');
+    nombre.textContent = obtenerNombreProducto(producto.id);
+    const precio = document.createElement('span');
+    precio.textContent = `$${obtenerPrecioProducto(producto.id)}`;
+    total += producto.cantidad * obtenerPrecioProducto(producto.id);
+    item.appendChild(cantidad);
+    item.appendChild(document.createTextNode(' x '));
+    item.appendChild(nombre);
+    item.appendChild(document.createTextNode(' - '));
+    item.appendChild(precio);
+    listaProductos.appendChild(item);
+    listaCantidad.textContent = `Total de productos: ${carrito.reduce((total, producto) => total + producto.cantidad, 0)}`;
+  });
+  document.getElementById('carrito-total').textContent = `Total a pagar: $${total}`;
+}
+
+function realizarCompra() {
+  const carrito = obtenerCarrito();
+  if (carrito.length === 0) {
+    Toastify({
+      text: "El carrito está vacío",
+      duration: 3000,
+      gravity: "bottom",
+      position: "right",
+      backgroundColor: "linear-gradient(to right, #ff416c, #ff4b2b)",
+    }).showToast();
+    return;
+  }
+  Swal.fire({
+    title: '¿Desea realizar la compra?',
+    showDenyButton: true,
+    confirmButtonText: `Sí`,
+    denyButtonText: `No`,
+    confirmButtonColor: '#28a745',
+    denyButtonColor: '#dc3545',
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Toastify({
+        text: "Compra realizada con éxito",
+        duration: 3000,
+        gravity: "bottom",
+        position: "right",
+        backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+      }).showToast();
+      localStorage.setItem('carrito', JSON.stringify([]));
+      actualizarCarrito();
+    }
+  });
+}

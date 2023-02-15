@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
+  
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,26 +11,28 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-</head>
-
-<body>
+  </head>
+  
+  <body>
     <h1>Mi Tienda Online</h1>
-
+    
     <h2>Categorías</h2>
-
+    
     <div id="productos">
     </div>
-
+    
     <div id="carrito">
-        <h2>Carrito de Compras</h2>
-        <ul id="carrito-lista"></ul>
-        <div id="carrito-total"></div>
-        <button id="carrito-vaciar">Vaciar carrito</button>
+      <h2>Carrito de Compras</h2>
+      <ul id="carrito-lista"></ul>
+      <ul id="carrito-cantidad"></ul>
+      <div id="carrito-total"></div>
+      <button id="carrito-compra" onclick="realizarCompra()">Realizar compra</button>
+      <button id="carrito-vaciar">Vaciar carrito</button>
     </div>
-
+    
     <script src="./categorias.json"></script>
     <script src="./productos.json"></script>
     <script src="./consumo.js"></script>
-</body>
-
+  </body>
+  
 </html>
