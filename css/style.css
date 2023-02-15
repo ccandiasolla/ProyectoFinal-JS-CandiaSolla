@@ -1,0 +1,48 @@
+.container {
+    width: 300px;
+}
+
+.body-user {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+.employee-info {
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px #dddddd;
+    margin-top: 30px;
+    text-align: left;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto;
+}
+  
+hr {
+    border: 1px solid #dddddd;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+  
+.btn-primary {
+    margin-top: 30px;
+    display: block;
+    align-items: center;
+}
+
+.container-consumo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+  }

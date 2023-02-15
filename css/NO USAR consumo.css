@@ -1,0 +1,30 @@
+.styledBtn{
+    border-radius: 15px;
+    padding: 2%;
+    text-align: center;
+    background-color: lightgrey;
+    color:black;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+.styledBtn:hover{
+    background-color: black;
+    color:lightgrey;
+}
+.item .title {
+    font-weight: bold;
+}
+.item .price {
+    color: green;
+    font-weight: bold;
+}
+.item div {
+    padding: 10px 0;
+}
+.styleCart{
+    display: flex;
+    justify-content: end;
+    position: fixed;
+    right: 15px;
+}

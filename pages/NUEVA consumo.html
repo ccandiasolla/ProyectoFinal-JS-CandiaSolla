@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumo de materiales</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/consumo.css">
+    <script src="../js/consumo.js"></script>
+    <script src="../js/categoriasData.js"></script>
+    <script src="../js/productosData.js"></script>
+</head>
+
+<body>
+    <h1>Tienda en línea</h1>
+    <nav>
+      <h2>Categorías</h2>
+      <ul>
+        <li><a href="#" onclick="mostrarProductos(1)">Cámaras</a></li>
+        <li><a href="#" onclick="mostrarProductos(2)">Grabadores</a></li>
+        <li><a href="#" onclick="mostrarProductos(3)">Cables</a></li>
+        <li><a href="#" onclick="mostrarProductos(4)">Accesorios</a></li>
+        <li><a href="#" onclick="mostrarProductos(5)">Otros</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h2>Productos</h2>
+      <table id="productos">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Stock</th>
+          </tr>
+        </thead>
+        <tbody id="listaProductos"></tbody>
+      </table>
+    </main>
+    <script>
+      function mostrarProductos(idCategoria) {
+        document.getElementById("listaProductos").innerHTML = "";
+        for (var i = 0; i < productos.length; i++) {
+          if (productos[i].categoria === idCategoria) {
+            var fila = "<tr><td>" + productos[i].nombre + "</td><td>$" + productos[i].precio + "</td><td>" + productos[i].stock + "</td></tr>";
+            document.getElementById("listaProductos").innerHTML += fila;
+          }
+        }
+      }
+    </script>
+  </body>
+
+</html>
