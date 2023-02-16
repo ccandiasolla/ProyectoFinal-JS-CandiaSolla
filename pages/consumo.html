@@ -12,14 +12,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   </head>
-  <div id="carrito" class="card">
-    <h2>Consumo de materiales</h2>
-    <ul id="carrito-lista"></ul>
-    <ul id="carrito-cantidad"></ul>
-    <div id="carrito-total" class="text-center"></div>
-    <button id="carrito-compra" class="btn btn-primary" onclick="realizarCompra()">Enviar</button>
-    <button id="carrito-vaciar" class="btn btn-secondary">Borrar</button>
-  </div>
   
   <body class="container">
     
@@ -27,6 +19,14 @@
     
     <div id="productos" class="card"></div>
     
+    <div id="carrito" class="card">
+      <h2>Consumo</h2>
+      <ul id="carrito-lista"></ul>
+      <ul id="carrito-cantidad"></ul>
+      <div id="carrito-total" class="text-center"></div>
+      <button id="carrito-compra" class="btn btn-primary" onclick="realizarCompra()">Enviar</button>
+      <button id="carrito-vaciar" class="btn btn-secondary">Borrar</button>
+    </div>
     
     <script src="./categorias.json"></script>
     <script src="./productos.json"></script>

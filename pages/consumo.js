@@ -9,7 +9,7 @@ function cargarProductos(categoriaID) {
         <div class="card col-md-3">
           <div class="card-body">
             <h5 class="card-title">${producto.nombre}</h5>
-            <p class="card-text">Precio: $${producto.precio}</p>
+            <p class="card-text">$${producto.precio}</p>
             <p class="card-stock">Stock: ${producto.stock}u</p>
             <a href="#" class="btn btn-primary" onclick="agregarAlCarrito(${producto.id})">Agregar</a>
           </div>
@@ -83,55 +83,6 @@ botonVaciarCarrito.addEventListener('click', () => {
   actualizarCarrito();
 });
 
-// function mostrarProductosCarrito(carrito) {
-//   const listaProductos = document.getElementById('carrito-lista');
-//   const listaCantidad = document.getElementById('carrito-cantidad');
-//   listaProductos.innerHTML = '';
-//   listaCantidad.innerHTML = '';
-//   let total = 0;
-//   carrito.forEach(producto => {
-//     const item = document.createElement('li');
-//     const cantidad = document.createElement('span');
-//     cantidad.textContent = producto.cantidad;
-//     const nombre = document.createElement('span');
-//     nombre.textContent = obtenerNombreProducto(producto.id);
-//     const precio = document.createElement('span');
-//     precio.textContent = `$${obtenerPrecioProducto(producto.id)}`;
-//     total += producto.cantidad * obtenerPrecioProducto(producto.id);
-//     item.appendChild(cantidad);
-//     item.appendChild(document.createTextNode(' x '));
-//     item.appendChild(nombre);
-//     item.appendChild(document.createTextNode(' - '));
-//     item.appendChild(precio);
-//     listaProductos.appendChild(item);
-//     listaCantidad.textContent = `Total de productos: ${carrito.reduce((total, producto) => total + producto.cantidad, 0)}`;
-//   });
-//   document.getElementById('carrito-total').textContent = `Total a pagar: $${total}`;
-// }
-
-// function mostrarProductosCarrito(carrito) {
-//   let carritoInfo = document.getElementById("carrito-info");
-//   let total = 0;
-
-//   carritoInfo.innerHTML = ""; // Limpiar el contenido previo del contenedor
-
-//   carrito.forEach((producto) => {
-//     let cantidad = producto.cantidad;
-//     let precio = producto.precio;
-//     let subtotal = cantidad * precio;
-
-//     carritoInfo.innerHTML += `
-//       <p>Producto: ${producto.nombre} - Cantidad: ${cantidad} - Subtotal: ${subtotal} €</p>
-//     `;
-
-//     total += subtotal;
-//   });
-
-//   carritoInfo.innerHTML += `
-//     <p>Total: ${total} €</p>
-//   `;
-// }
-
 function realizarCompra() {
   const carrito = obtenerCarrito();
   if (carrito.length === 0) {
@@ -140,7 +91,7 @@ function realizarCompra() {
       duration: 3000,
       gravity: "bottom",
       position: "center",
-      backgroundColor: "#ff4b2b",
+      backgroundColor: "red",
     }).showToast();
     return;
   }
@@ -157,8 +108,8 @@ function realizarCompra() {
         text: "Compra realizada con éxito",
         duration: 3000,
         gravity: "bottom",
-        position: "right",
-        backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+        position: "center",
+        backgroundColor: "#155724",
       }).showToast();
       localStorage.setItem('carrito', JSON.stringify([]));
       actualizarCarrito();
