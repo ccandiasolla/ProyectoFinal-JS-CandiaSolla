@@ -1,42 +1,162 @@
-.cart {
-  border: 1px solid black;
-  padding: 10px;
-  margin-top: 20px;
+/* AZUL USADO #007bff */ 
+
+/* Estilos para la barra de navegación */
+.nav {
+
+  
+  justify-content: space-around;
 }
 
-.cart h3 {
-  margin-top: 0;
+a:hover {
+  text-decoration: none;
 }
 
-.cart ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+/* Estilos para los botones */
+.btn {
+  margin: 5px; /* Margen entre botones */
 }
 
-.cart li {
-  margin-bottom: 10px;
+/* Estilos para las tarjetas de producto */
+.card {
+  padding: 5px; /* Espacio interno */
+  border: 1px solid #dee2e6; /* Borde */
 }
 
-.cart-item {
+.card h2 {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  margin: 0; /* Quita el margen predeterminado de h2 */
 }
 
-.cart-item .name {
-  flex: 1;
-  margin-right: 10px;
+.card ul {
+  margin: 0; /* Quita el margen predeterminado de ul */
+  padding: 0; /* Quita el espacio interno predeterminado de ul */
+  list-style: none; /* Quita los puntos de lista */
 }
 
-.cart-item .quantity {
-  width: 50px;
-  text-align: right;
+.card li {
+  margin: 5px 0; /* Margen superior e inferior */
 }
 
-.cart-item .remove {
-  background-color: #dc3545;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
+
+
+/* Estilos para el carrito de compras */
+#carrito {
+  margin-top: 50px; /* Margen superior */
+  padding: 5px; /* Espacio interno */
+  border: 1px solid #dee2e6; /* Borde */
 }
+
+#carrito h2 {
+  margin: 0; /* Quita el margen predeterminado de h2 */
+}
+
+#carrito ul {
+  margin: 0; /* Quita el margen predeterminado de ul */
+  padding: 0; /* Quita el espacio interno predeterminado de ul */
+  list-style: none; /* Quita los puntos de lista */
+}
+
+#carrito li {
+  margin: 5px 0; /* Margen superior e inferior */
+}
+
+#carrito-total {
+  font-size: 1.2rem; /* Tamaño del texto */
+  font-weight: bold; /* Negrita */
+  margin: 10px 0; /* Margen superior e inferior */
+}
+
+/* Estilos para el mensaje de confirmación */
+.alert-success {
+  margin-top: 20px; /* Margen superior */
+  padding: 10px; /* Espacio interno */
+  border: 1px solid #c3e6cb; /* Borde */
+  background-color: #d4edda; /* Color de fondo */
+  color: #155724; /* Color del texto */
+}
+/* Estilos para la barra de navegación */
+.navbar {
+  background-color: #343a40; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  padding: 10px 0; /* Espacio interno */
+}
+
+.navbar h1 {
+  margin: 0; /* Quita el margen predeterminado de h1 */
+  font-size: 2rem; /* Tamaño del texto */
+}
+
+/* Estilos para los botones */
+.btn {
+  margin: 5px; /* Margen entre botones */
+}
+
+/* Estilos para las tarjetas de producto */
+.card {
+  margin: 20px 0; /* Margen superior e inferior */
+  padding: 20px; /* Espacio interno */
+  border: 1px solid #dee2e6; /* Borde */
+}
+
+.card h2 {
+  margin: 0; /* Quita el margen predeterminado de h2 */
+}
+
+.card ul {
+  margin: 0; /* Quita el margen predeterminado de ul */
+  padding: 0; /* Quita el espacio interno predeterminado de ul */
+  list-style: none; /* Quita los puntos de lista */
+}
+
+.card li {
+  margin: 5px 0; /* Margen superior e inferior */
+}
+
+.card img {
+  max-width: 100%; /* Ajusta el tamaño de la imagen */
+  margin-bottom: 10px; /* Margen inferior */
+}
+
+/* Estilos para el carrito de compras */
+#carrito {
+  margin-top: 50px; /* Margen superior */
+  padding: 20px; /* Espacio interno */
+  border: 1px solid #dee2e6; /* Borde */
+}
+
+#carrito h2 {
+  margin: 0; /* Quita el margen predeterminado de h2 */
+}
+
+#carrito ul {
+  margin: 0; /* Quita el margen predeterminado de ul */
+  padding: 0; /* Quita el espacio interno predeterminado de ul */
+  list-style: none; /* Quita los puntos de lista */
+}
+
+#carrito li {
+  margin: 5px 0; /* Margen superior e inferior */
+}
+
+#carrito-total {
+  font-size: 1.2rem; /* Tamaño del texto */
+  font-weight: bold; /* Negrita */
+  margin: 10px 0; /* Margen superior e inferior */
+}
+
+#productos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* Estilos para el mensaje de confirmación */
+.alert-success {
+  margin-top: 20px; /* Margen superior */
+  padding: 10px; /* Espacio interno */
+  border: 1px solid #c3e6cb; /* Borde */
+  background-color: #d4edda; /* Color de fondo */
+  color: #155724; /* Color del texto */
+}
+
