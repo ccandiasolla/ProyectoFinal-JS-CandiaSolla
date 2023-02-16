@@ -1,14 +1,13 @@
 /* AZUL USADO #007bff */ 
 
+body {
+  width: 100%;
+}
 /* Estilos para la barra de navegación */
 .nav {
-
-  
-  justify-content: space-around;
-}
-
-a:hover {
-  text-decoration: none;
+  font-size: 1.2rem;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 /* Estilos para los botones */
@@ -18,6 +17,7 @@ a:hover {
 
 /* Estilos para las tarjetas de producto */
 .card {
+  justify-content: center;
   padding: 5px; /* Espacio interno */
   border: 1px solid #dee2e6; /* Borde */
 }
@@ -42,8 +42,9 @@ a:hover {
 
 /* Estilos para el carrito de compras */
 #carrito {
-  margin-top: 50px; /* Margen superior */
-  padding: 5px; /* Espacio interno */
+  width: 100%;
+  margin-top: 0px; /* Margen superior */
+  padding: 20px; /* Espacio interno */
   border: 1px solid #dee2e6; /* Borde */
 }
 
@@ -62,7 +63,7 @@ a:hover {
 }
 
 #carrito-total {
-  font-size: 1.2rem; /* Tamaño del texto */
+  font-size: 1rem; /* Tamaño del texto */
   font-weight: bold; /* Negrita */
   margin: 10px 0; /* Margen superior e inferior */
 }
@@ -84,7 +85,7 @@ a:hover {
 
 .navbar h1 {
   margin: 0; /* Quita el margen predeterminado de h1 */
-  font-size: 2rem; /* Tamaño del texto */
+  font-size: 1rem; /* Tamaño del texto */
 }
 
 /* Estilos para los botones */
@@ -97,6 +98,8 @@ a:hover {
   margin: 20px 0; /* Margen superior e inferior */
   padding: 20px; /* Espacio interno */
   border: 1px solid #dee2e6; /* Borde */
+  align-content: center;
+  flex-wrap: wrap;
 }
 
 .card h2 {
@@ -113,10 +116,6 @@ a:hover {
   margin: 5px 0; /* Margen superior e inferior */
 }
 
-.card img {
-  max-width: 100%; /* Ajusta el tamaño de la imagen */
-  margin-bottom: 10px; /* Margen inferior */
-}
 
 /* Estilos para el carrito de compras */
 #carrito {
@@ -151,12 +150,4 @@ a:hover {
   flex-wrap: wrap;
 }
 
-/* Estilos para el mensaje de confirmación */
-.alert-success {
-  margin-top: 20px; /* Margen superior */
-  padding: 10px; /* Espacio interno */
-  border: 1px solid #c3e6cb; /* Borde */
-  background-color: #d4edda; /* Color de fondo */
-  color: #155724; /* Color del texto */
-}
 
