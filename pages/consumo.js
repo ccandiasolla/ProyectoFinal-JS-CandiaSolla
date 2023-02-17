@@ -105,7 +105,7 @@ botonVaciarCarrito.addEventListener("click", () => {
   }
 
   Swal.fire({
-    title: "¿Está seguro de que desea borrar los productos?",
+    title: "¿Desea borrar los productos?",
     showDenyButton: true,
     confirmButtonText: "Si",
     denyButtonText: "No",
@@ -131,7 +131,7 @@ function realizarCompra() {
   const carrito = obtenerCarrito();
   if (carrito.length === 0) {
     Toastify({
-      text: "No ha agregado productos",
+      text: "No hay productos que consumir",
       duration: 3000,
       gravity: "top",
       position: "right",
@@ -140,7 +140,7 @@ function realizarCompra() {
     return;
   }
   Swal.fire({
-    title: "¿Desea realizar el consumo?",
+    title: "¿Desea consumir los productos?",
     showDenyButton: true,
     confirmButtonText: "Sí",
     denyButtonText: "No",

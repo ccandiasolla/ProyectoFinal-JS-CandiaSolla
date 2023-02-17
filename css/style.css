@@ -36,6 +36,12 @@ hr {
     align-items: center;
 }
 
+.btn-secondary {
+    margin-top: 30px;
+    display: block;
+    align-items: center;
+}
+
 .container-consumo {
     display: flex;
     align-items: center;

@@ -19,6 +19,17 @@ body {
   margin: 5px;
 }
 
+.btn-secondary {
+  margin-top: 30px;
+  display: block;
+  align-items: center;
+}
+
+.btn-cerrarsesion{
+  display: flex;
+  justify-content: center;
+}
+
 /* Estilos para las tarjetas de producto */
 .card {
   justify-content: center;
@@ -73,11 +84,6 @@ body {
 .navbar h1 {
   margin: 0;
   font-size: 1rem;
-}
-
-/* Estilos para los botones */
-.btn {
-  margin: 5px;
 }
 
 /* Estilos para las tarjetas de producto */
