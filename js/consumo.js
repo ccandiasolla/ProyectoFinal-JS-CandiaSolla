@@ -1,6 +1,6 @@
 // Se ejecuta cuando el documento se carga
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("categorias.json")
+  fetch("../js/categorias.json")
     .then(response => response.json())
     .then(data => {
       const categoriasHTML = data.categorias.map(categoria => `
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Función para cargar los productos de la categoría seleccionada
 function cargarProductos(categoriaID) {
-  fetch("productos.json")
+  fetch("../js/productos.json")
     .then(response => response.json())
     .then(data => {
       const productos = data.productos.filter(producto => producto.categoria === categoriaID);
@@ -42,7 +42,7 @@ function agregarAlCarrito(productoID) {
   if (productoEnCarrito) {
     productoEnCarrito.cantidad++;
   } else {
-    fetch("productos.json")
+    fetch("../js/productos.json")
       .then(response => response.json())
       .then(data => {
         const producto = data.productos.find(producto => producto.id === productoID);
