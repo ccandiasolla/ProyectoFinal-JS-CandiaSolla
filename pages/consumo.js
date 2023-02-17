@@ -4,7 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(response => response.json())
     .then(data => {
       const categoriasHTML = data.categorias.map(categoria => `
-        <li><a href="#" id="${categoria.id}" style="text-decoration: none" onclick="cargarProductos(${categoria.id})">${categoria.nombre}</a></li>
+        <li>
+        <a href="#" id="${categoria.id}" style="text-decoration: none" onclick="cargarProductos(${categoria.id})">${categoria.nombre}</a>
+        </li>
       `).join("");
       document.getElementById("categorias").innerHTML = categoriasHTML;
     })
