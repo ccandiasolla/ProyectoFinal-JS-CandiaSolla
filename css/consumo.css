@@ -3,151 +3,149 @@
 body {
   width: 100%;
 }
+
 /* Estilos para la barra de navegación */
 .nav {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  padding: 20px;
+  text-decoration: none;
 }
+
 
 /* Estilos para los botones */
 .btn {
-  margin: 5px; /* Margen entre botones */
+  margin: 5px;
 }
 
 /* Estilos para las tarjetas de producto */
 .card {
   justify-content: center;
-  padding: 5px; /* Espacio interno */
-  border: 1px solid #dee2e6; /* Borde */
+  padding: 5px;
+  border: 1px solid #dee2e6;
 }
 
 .card h2 {
   display: flex;
   justify-content: center;
-  margin: 0; /* Quita el margen predeterminado de h2 */
+  margin: 0;
 }
 
 .card ul {
-  margin: 0; /* Quita el margen predeterminado de ul */
-  padding: 0; /* Quita el espacio interno predeterminado de ul */
-  list-style: none; /* Quita los puntos de lista */
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .card li {
-  margin: 5px 0; /* Margen superior e inferior */
+  margin: 5px 0;
 }
-
-
 
 /* Estilos para el carrito de compras */
 #carrito {
   width: 100%;
-  margin-top: 0px; /* Margen superior */
-  padding: 20px; /* Espacio interno */
-  border: 1px solid #dee2e6; /* Borde */
+  margin-top: 0px;
+  padding: 20px;
+  border: 1px solid #dee2e6;
 }
 
 #carrito h2 {
-  margin: 0; /* Quita el margen predeterminado de h2 */
+  margin: 0;
 }
 
 #carrito ul {
-  margin: 0; /* Quita el margen predeterminado de ul */
-  padding: 0; /* Quita el espacio interno predeterminado de ul */
-  list-style: none; /* Quita los puntos de lista */
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 #carrito li {
-  margin: 5px 0; /* Margen superior e inferior */
+  margin: 5px 0;
 }
 
 #carrito-total {
-  font-size: 1rem; /* Tamaño del texto */
-  font-weight: bold; /* Negrita */
-  margin: 10px 0; /* Margen superior e inferior */
-}
-
-/* Estilos para el mensaje de confirmación */
-.alert-success {
-  margin-top: 20px; /* Margen superior */
-  padding: 10px; /* Espacio interno */
-  border: 1px solid #c3e6cb; /* Borde */
-  background-color: #d4edda; /* Color de fondo */
-  color: #155724; /* Color del texto */
-}
-/* Estilos para la barra de navegación */
-.navbar {
-  background-color: #343a40; /* Color de fondo */
-  color: #fff; /* Color del texto */
-  padding: 10px 0; /* Espacio interno */
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 10px 0;
 }
 
 .navbar h1 {
-  margin: 0; /* Quita el margen predeterminado de h1 */
-  font-size: 1rem; /* Tamaño del texto */
+  margin: 0;
+  font-size: 1rem;
 }
 
 /* Estilos para los botones */
 .btn {
-  margin: 5px; /* Margen entre botones */
+  margin: 5px;
 }
 
 /* Estilos para las tarjetas de producto */
 .card {
-  margin: 20px 0; /* Margen superior e inferior */
-  padding: 20px; /* Espacio interno */
-  border: 1px solid #dee2e6; /* Borde */
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #dee2e6;
   align-content: center;
   flex-wrap: wrap;
 }
 
 .card h2 {
-  margin: 0; /* Quita el margen predeterminado de h2 */
+  margin: 0;
 }
 
 .card ul {
-  margin: 0; /* Quita el margen predeterminado de ul */
-  padding: 0; /* Quita el espacio interno predeterminado de ul */
-  list-style: none; /* Quita los puntos de lista */
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .card li {
-  margin: 5px 0; /* Margen superior e inferior */
+  margin: 5px 0;
 }
 
 
 /* Estilos para el carrito de compras */
 #carrito {
-  margin-top: 50px; /* Margen superior */
-  padding: 20px; /* Espacio interno */
-  border: 1px solid #dee2e6; /* Borde */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  padding: 20px;
+  border: 1px solid #dee2e6;
 }
 
 #carrito h2 {
-  margin: 0; /* Quita el margen predeterminado de h2 */
+  margin: 0;
 }
 
 #carrito ul {
-  margin: 0; /* Quita el margen predeterminado de ul */
-  padding: 0; /* Quita el espacio interno predeterminado de ul */
-  list-style: none; /* Quita los puntos de lista */
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 #carrito li {
-  margin: 5px 0; /* Margen superior e inferior */
+  margin: 5px 0;
 }
 
 #carrito-total {
-  font-size: 1.2rem; /* Tamaño del texto */
-  font-weight: bold; /* Negrita */
-  margin: 10px 0; /* Margen superior e inferior */
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
 }
 
+/* Flex para los productos */
 #productos {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-
+/* Cambia la disposicion de las categorias de horiztal a vertical cuando la pantalla es menor a 780px*/
+@media screen and (max-width: 779px) {
+  .nav {
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+}

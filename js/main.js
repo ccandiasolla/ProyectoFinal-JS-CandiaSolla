@@ -35,8 +35,8 @@ function login() {
         duration: 2000,
         close: true,
         gravity: "top",
-        position: "center",
-        backgroundColor: "#007bff"
+        position: "right",
+        backgroundColor: "green"
       }).showToast();
 
       setTimeout(() => {
@@ -48,18 +48,17 @@ function login() {
   }
 
   Toastify({
-    text: "Nombre de usuario o contraseña incorrectos",
+    text: "Contraseña incorrecta",
     duration: 2000,
     close: true,
     gravity: "top",
-    position: "center",
-    backgroundColor: "#007bff"
+    position: "right",
+    backgroundColor: "red"
   }).showToast();
   
 }
 
 let currentTec = JSON.parse(sessionStorage.getItem('currentTec'));
-
 
 document.getElementById("employee-name").innerHTML = `${currentTec.nombre} ${currentTec.apellido}`;
 document.getElementById("employee-age").innerHTML = currentTec.edad
